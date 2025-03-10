@@ -1,0 +1,179 @@
+body {
+    background-color: burlywood;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#button, #nameButton {
+    height: 35px;
+    width: 100px;
+    background-color: cadetblue;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 700px;
+}
+
+h1{
+    text-align: center;
+    color: blueviolet;
+    font-family:Lucida;
+}
+
+#first{
+    text-align: center;
+    color: red;
+    font-size: larger;
+    font-weight: bolder;
+    animation-name: bounce;
+}
+
+#nameInHeart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(-400deg) translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.heart {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    transform: rotate(135deg);
+    margin-left: 600px;
+    margin-top: 200px;
+    position: relative;
+    animation: heartBeat 1s infinite;
+}
+
+.heart::after,
+.heart::before {
+    content: '';
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::after {
+    top: -100px;
+    right: 0;
+}
+
+.heart::before {
+    top: 0;
+    right: -100px;
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.2)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+canvas {
+    position: absolute;
+    z-index: -1;
+}
+
+div#content {
+    width: 600px;
+    margin: 0 auto;
+    padding: 8px 0px;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+button#button:hover, #nameButton:hover {
+    background-color: pink;
+    color: black;
+}
+
+.slider {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.draggable {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    cursor: grab;
+    user-select: none;
+    top: 200px;
+    left: 500px;
+    transition: all 0.3s ease-in-out;
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
+
+#message {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gradient-glow-button {
+    background: linear-gradient(45deg, #ff8c00, #ff4b9e);
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    margin-left: 700px;
+}
+
+.gradient-glow-button .button-text {
+    display: inline-block;
+    position: relative;
+}
+
+.gradient-glow-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s ease;
+}
+
+.gradient-glow-button:hover {
+    background: linear-gradient(45deg, #ff4b9e, #ff8c00);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-glow-button:hover::after {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.gradient-glow-button:hover .button-text {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff8c00;
+}
+
