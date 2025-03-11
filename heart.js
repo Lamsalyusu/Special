@@ -140,15 +140,19 @@ a.addEventListener('click', () => {
     }, 6000);
     
     setTimeout(() => {
-        document.querySelector('#first').innerHTML = 'You make my world brighter! 😊';
+        document.querySelector('#first').innerHTML = '❤️Youve always beeen in my heart❤️';
     }, 10000);
 
     setTimeout(() => {
-        document.querySelector('#first').innerHTML = '❤️ It’s always been you ❤️';
+        document.querySelector('#first').innerHTML = '❤️It’s always been you❤️';
     }, 14000);
+  
+    setTimeout(() => {
+        document.querySelector('#first').innerHTML = 'Sorry for the copyright issue 😅🥰';
+    }, 18000);
 
     setTimeout(() => {
-        document.querySelector('#nameInHeart').innerHTML = '❤️ It’s You Aakansha ❤️';
-    }, 14000);
+        document.querySelector('#nameInHeart').innerHTML = '❤️It’s You Aakansha❤️';
+    }, 20000);
 });
 });
